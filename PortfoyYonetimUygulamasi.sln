@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfoyYonetimUygulamasi.Entity", "PortfoyYonetimUygulamasi.Entity\PortfoyYonetimUygulamasi.Entity.csproj", "{FC99A516-7FB0-4A9A-A078-B83D6C496019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfoyYonetimUygulamasi.MVC", "PortfoyYonetimUygulamasi.MVC\PortfoyYonetimUygulamasi.MVC.csproj", "{31CA04F5-DC23-4A81-B789-40AE74194AA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC99A516-7FB0-4A9A-A078-B83D6C496019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC99A516-7FB0-4A9A-A078-B83D6C496019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC99A516-7FB0-4A9A-A078-B83D6C496019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC99A516-7FB0-4A9A-A078-B83D6C496019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CA04F5-DC23-4A81-B789-40AE74194AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CA04F5-DC23-4A81-B789-40AE74194AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CA04F5-DC23-4A81-B789-40AE74194AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CA04F5-DC23-4A81-B789-40AE74194AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8E5F5EB8-E6A8-43B8-9810-691A7B716A32}
+	EndGlobalSection
+EndGlobal

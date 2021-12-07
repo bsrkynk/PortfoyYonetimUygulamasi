@@ -1,0 +1,98 @@
+﻿@using Microsoft.AspNetCore.Http
+@using PortfoyYonetimUygulamasi.Entity.User;
+
+@model List<_24HourExchange>;
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Portföy Yönetim Uygulaması</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="~/assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+    <!-- Page Wrapper -->
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header" class="alt">
+            <h1><a href="index.html">Portfoy Yönetim Uygulaması</a></h1>
+            <nav>
+                <a href="#menu">Menu</a>
+            </nav>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <div class="inner">
+                <h2>Menu</h2>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="generic.html">Generic</a></li>
+                    <li><a href="elements.html">Elements</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+                <a href="#" class="close">Close</a>
+            </div>
+        </nav>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <div class="logo"><span class="icon fa-gem"></span></div>
+                <h2>Portföy Yönetim Uygulaması</h2>
+                <p>Portföyünüzü buradan yönetin!</a></p>
+            </div>
+        </section>
+
+        <!-- Wrapper -->
+        <section id="wrapper">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Ad</th>
+                        <th scope="col">Açılış Fiyatı</th>
+                        <th scope="col">Fiyat Değişimi</th>
+                        <th scope="col">Kapanış Fiyatı</th>
+                        <th scope="col">Hacim Ağırlıklı Ortalama Fiyat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                    <tr>
+                        <td data-label="Ad">@x.symbol</td>
+                        <td data-label="Açılış Fiyatı">@x.openPrice</td>
+                        <td data-label="Fiyat Değişimi">% @x.priceChangePercent</td>
+                        <td data-label="Kapanış Fiyatı">% @x.prevClosePrice</td>
+                        <td data-label="Hacim Ağırlıklı Ortalama Fiyat">@x.weightedAvgPrice</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Footer -->
+        <section id="footer">
+            
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery.scrollex.min.js"></script>
+    <script src="~/assets/js/browser.min.js"></script>
+    <script src="~/assets/js/breakpoints.min.js"></script>
+    <script src="~/assets/js/util.js"></script>
+    <script src="~/assets/js/main.js"></script>
+
+</body>
+</html>
