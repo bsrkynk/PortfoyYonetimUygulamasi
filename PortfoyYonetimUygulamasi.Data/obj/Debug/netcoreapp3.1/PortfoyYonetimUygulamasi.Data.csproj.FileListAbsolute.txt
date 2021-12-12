@@ -1,0 +1,8 @@
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.deps.json
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.dll
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.pdb
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.AssemblyInfoInputs.cache
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.AssemblyInfo.cs
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.csproj.CoreCompileInputs.cache
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.dll
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.pdb

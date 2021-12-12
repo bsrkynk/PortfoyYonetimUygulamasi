@@ -6,16 +6,10 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="RestSharp" Version="106.13.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PortfoyYonetimUygulamasi.Entity\PortfoyYonetimUygulamasi.Entity.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <ProjectReference Include="..\PortfoyYonetimUygulamasi.Host\PortfoyYonetimUygulamasi.Host.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,12 @@
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Host.csprojAssemblyReference.cache
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Host.AssemblyInfoInputs.cache
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Host.AssemblyInfo.cs
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Host.csproj.CoreCompileInputs.cache
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Host.deps.json
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Host.dll
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Host.pdb
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Entity.dll
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Entity.pdb
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Host.csproj.CopyComplete
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Host.dll
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Host.pdb
