@@ -14,6 +14,6 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete
     {
         public PortfolioRepository(DbContext context) : base(context)
         {
-        }
+        } 
     }
 }
