@@ -12,5 +12,11 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         {
             return View();
         }
+        
+        public IActionResult Register()
+        {
+            return View();
+        }
+
     }
 }
