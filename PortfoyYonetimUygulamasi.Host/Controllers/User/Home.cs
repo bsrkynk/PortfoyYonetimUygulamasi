@@ -11,11 +11,10 @@ using PortfoyYonetimUygulamasi.Entity.User;
 using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
 using RouteAttribute = System.Web.Http.RouteAttribute;
 using RoutePrefixAttribute = System.Web.Http.RoutePrefixAttribute;
-
 namespace PortfoyYonetimUygulamasi.Host.Controllers.User
 {
     [RoutePrefix("/api/PortfoyYonetimSitesi")]
-    public class Home: Controller
+    public class Home : Controller
     {
         [HttpPost]
         [Route("/Home")]

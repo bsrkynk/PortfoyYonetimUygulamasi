@@ -1,0 +1,9 @@
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Shared.deps.json
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Shared.dll
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Shared.pdb
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Shared.AssemblyInfoInputs.cache
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Shared.AssemblyInfo.cs
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Shared.csproj.CoreCompileInputs.cache
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Shared.dll
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Shared.pdb
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Shared.csprojAssemblyReference.cache

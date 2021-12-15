@@ -6,3 +6,12 @@ E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netco
 E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.csproj.CoreCompileInputs.cache
 E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.dll
 E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.pdb
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.deps.json
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.dll
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\bin\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.pdb
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.AssemblyInfoInputs.cache
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.AssemblyInfo.cs
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.csproj.CoreCompileInputs.cache
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.dll
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.pdb
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Data\obj\Debug\netcoreapp3.1\PortfoyYonetimUygulamasi.Data.csprojAssemblyReference.cache
