@@ -15,3 +15,5 @@ C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Ho
 C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\obj\Debug\netcoreapp5.0\PortfoyYonetimUygulamasi.Host.dll
 C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\obj\Debug\netcoreapp5.0\ref\PortfoyYonetimUygulamasi.Host.dll
 C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\obj\Debug\netcoreapp5.0\PortfoyYonetimUygulamasi.Host.pdb
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\bin\Debug\netcoreapp5.0\PortfoyYonetimUygulamasi.Data.dll
+C:\Users\hakan\source\repos\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Host\bin\Debug\netcoreapp5.0\PortfoyYonetimUygulamasi.Data.pdb

@@ -14,13 +14,13 @@ namespace PortfoyYonetimUygulamasi.MVC.Filters
     {
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            int? userId = context.HttpContext.Session.GetInt32("MEMBER_ID");
+            int? userId = context.HttpContext.Session.GetInt32("USERNAME");
 
             if (!userId.HasValue)
             {
                 context.Result = new RedirectToRouteResult(new RouteValueDictionary
             {
-                {"action","LoginScreen" },
+                {"action","Index" },
                 {"controller","Login" },
             });
             }

@@ -3,20 +3,53 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using PortfoyYonetimUygulamasi.Entity.Dtos;
+using PortfoyYonetimUygulamasi.Host.Abstract;
 
 namespace PortfoyYonetimUygulamasi.MVC.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly IUserService _userService;
+
+        public LoginController(IUserService userService)
+        {
+            _userService = userService;
+        }
+
         public IActionResult Index()
         {
             return View();
         }
-        
+
+        [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
+        [HttpPost]
+        public async Task< IActionResult> Register(UserAddDto userAddDto) //async yapılmazsa kaydetmiyor
+        {
+          await  _userService.Add(userAddDto);
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> SignIn(SignInUserDto signInUserDto)
+        {
+            var result=await _userService.SignInUser(signInUserDto);
+            if (result)
+            {
+                SaveDataWithSession(signInUserDto.UserName);
+                return Redirect("/Portfolio/Index/");
+            }
 
+            return Redirect("/Home/Index");
+        }
+
+        private void SaveDataWithSession(string result)
+        {
+            HttpContext.Session.SetString("USERNAME",result); //login olan kullanıcının usernameini sessiona kaydediyor
+        }
     }
 }

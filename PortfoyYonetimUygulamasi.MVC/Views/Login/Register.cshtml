@@ -1,6 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@model PortfoyYonetimUygulamasi.Entity.Dtos.UserAddDto
 @{
 }
 <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,32 +22,54 @@
                                     <p class="card-description">
                                         Basic form layout
                                     </p>
-                                    <form class="forms-sample">
-                                        <div class="form-group">
-                                            <label for="exampleInputUsername1">Username</label>
-                                            <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
+                                    @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+                                    {
+                                        <div class="form-sample">
+                                            <div class="form-group">
+                                                @Html.LabelFor(x => x.Name)
+                                                @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.LabelFor(x => x.Surname)
+                                                @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.LabelFor(x => x.UserName)
+                                                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+                                            </div>
+                                            <div class="form-group">
+                                                @Html.LabelFor(x => x.UserPassword)
+                                                @Html.TextBoxFor(x => x.UserPassword, new { @class = "form-control", placeholder = "Parola", type = "Password" })
+                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputPassword1">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputConfirmPassword1">Confirm Password</label>
-                                            <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
-                                        </div>
-                                        <div class="form-check form-check-flat form-check-primary">
-                                            <label class="form-check-label">
-                                                <input type="checkbox" class="form-check-input">
-                                                Remember me
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                        <button class="btn btn-light">Cancel</button>
-                                    </form>
+                                        <button class="btn btn-warning">Kayıt Ol</button>
+                                    }
+                                    @*<form class="forms-sample">
+            <div class="form-group">
+                <label for="exampleInputUsername1">Username</label>
+                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputConfirmPassword1">Confirm Password</label>
+                <input type="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
+            </div>
+            <div class="form-check form-check-flat form-check-primary">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Remember me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Submit</button>
+            <button class="btn btn-light">Cancel</button>
+        </form>*@
                                 </div>
                             </div>
                         </div>
