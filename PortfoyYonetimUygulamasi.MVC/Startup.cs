@@ -17,6 +17,9 @@ namespace PortfoyYonetimUygulamasi.MVC
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();                  //Session için eklendi
+            services.AddDistributedMemoryCache();   //Session için eklendi
+
             services.AddControllersWithViews();
             services.LoadMyServices();
 
@@ -32,7 +35,7 @@ namespace PortfoyYonetimUygulamasi.MVC
             }
 
             app.UseRouting();
-
+            app.UseSession();// session için eklendi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

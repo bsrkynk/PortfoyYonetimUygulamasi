@@ -11,5 +11,6 @@ namespace PortfoyYonetimUygulamasi.Host.Abstract
     public interface IUserService
     {
         Task Add(UserAddDto userAddDto);
+        Task<bool> SignInUser(SignInUserDto signInUserDto);
     }
 }
