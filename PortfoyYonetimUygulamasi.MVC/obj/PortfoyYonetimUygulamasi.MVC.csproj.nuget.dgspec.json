@@ -261,6 +261,10 @@
             "Microsoft.AspNet.WebApi.Core": {
               "target": "Package",
               "version": "[5.2.7, )"
+            },
+            "bootstrap.chosen": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

@@ -11,7 +11,6 @@ namespace PortfoyYonetimUygulamasi.Entity.Concrete
         /// işlem tipini belirtir. Alış, satış, transfer
         /// </summary>
         public string TransactionTypeName { get; set; }
-        public int TransactionId { get; set; }
         public Transaction Transaction {get; set; }
     }
 }
