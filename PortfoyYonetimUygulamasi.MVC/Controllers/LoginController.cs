@@ -20,6 +20,7 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
 
         public IActionResult Index()
         {
+
             return View();
         }
 
@@ -38,18 +39,19 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         public async Task<IActionResult> SignIn(SignInUserDto signInUserDto)
         {
             var result=await _userService.SignInUser(signInUserDto);
-            if (result)
+            if (result!=-1)
             {
-                SaveDataWithSession(signInUserDto.UserName);
+                SaveDataWithSession(result);
                 return Redirect("/Portfolio/Index/");
             }
 
             return Redirect("/Home/Index");
         }
 
-        private void SaveDataWithSession(string result)
+        private void SaveDataWithSession(int result)
         {
-            HttpContext.Session.SetString("USERNAME",result); //login olan kullanıcının usernameini sessiona kaydediyor
+            HttpContext.Session.SetInt32("USERNAME",result); //login olan kullanıcının usernameini sessiona kaydediyor
+            
         }
     }
 }

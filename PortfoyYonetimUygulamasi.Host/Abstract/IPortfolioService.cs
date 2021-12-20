@@ -8,9 +8,10 @@ using PortfoyYonetimUygulamasi.Entity.Dtos;
 
 namespace PortfoyYonetimUygulamasi.Host.Abstract
 {
-    public interface IUserService
+    public  interface IPortfolioService
     {
-        Task Add(UserAddDto userAddDto);
-        Task<int> SignInUser(SignInUserDto signInUserDto);
+        Task Add(CreatePortfolioDto userAddDto);
+        Task<List<Portfolio>> GetAllUserPortfolios(int userId);
+        public Task<List<Portfolio>> GetUserPortfolio(int portfolioId);
     }
 }

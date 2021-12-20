@@ -11,6 +11,6 @@ namespace PortfoyYonetimUygulamasi.Data.Abstract
 {
     public interface IUserRepository:IEntityRepository<User>
     {
-        Task<bool> SignInUser(User user);
+        Task<int> SignInUser(User user);
     }
 }

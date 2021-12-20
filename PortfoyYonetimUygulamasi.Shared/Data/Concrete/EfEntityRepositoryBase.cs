@@ -38,13 +38,20 @@ namespace PortfoyYonetimUygulamasi.Shared.Data.Concrete
             await Task.Run(() => { _context.Set<TEntity>().Remove(entity); }); //remove async olmadığı için task oluşturuldu
         }
 
-        public async Task<IList<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> Predicate)
+        public async Task<IList<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> Predicate = null, params Expression<Func<TEntity, object>>[] includeProperties)
         {
             IQueryable<TEntity> query = _context.Set<TEntity>();
 
             if (Predicate != null)
             {
                 query = query.Where(Predicate);
+            }
+            if (includeProperties.Any())
+            {
+                foreach (var includeProperty in includeProperties)
+                {
+                    query = query.Include(includeProperty);
+                }
             }
             return await query.ToListAsync();
         }

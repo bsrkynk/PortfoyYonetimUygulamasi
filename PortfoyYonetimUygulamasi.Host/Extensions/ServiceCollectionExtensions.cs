@@ -19,6 +19,7 @@ namespace PortfoyYonetimUygulamasi.Host.Extensions
             serviceCollection.AddDbContext<PortfoyYonetimUygulamasiContext>();
             serviceCollection.AddScoped<IUnitOfWork, UnitOfWork>();
             serviceCollection.AddScoped<IUserService, UserManager>();
+            serviceCollection.AddScoped<IPortfolioService, PortfolioManager>();
             return serviceCollection;
         }
     }

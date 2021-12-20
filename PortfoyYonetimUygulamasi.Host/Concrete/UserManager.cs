@@ -34,7 +34,7 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
             await _unitOfWork.SaveAsync();
         }
 
-        public async Task<bool> SignInUser(SignInUserDto signInUserDto)
+        public async Task<int> SignInUser(SignInUserDto signInUserDto)
         {
          return await 
              _unitOfWork.Users.SignInUser(new User

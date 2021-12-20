@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using PortfoyYonetimUygulamasi.Host.Extensions;
+using PortfoyYonetimUygulamasi.MVC.ViewModels;
 
 namespace PortfoyYonetimUygulamasi.MVC
 {
@@ -22,6 +23,8 @@ namespace PortfoyYonetimUygulamasi.MVC
 
             services.AddControllersWithViews();
             services.LoadMyServices();
+            services.AddScoped<PortfolioViewModel, PortfolioViewModel>();
+
 
         }
 

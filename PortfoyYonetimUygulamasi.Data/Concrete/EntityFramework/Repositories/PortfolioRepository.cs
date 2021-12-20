@@ -12,8 +12,10 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete
 {
     public class PortfolioRepository:EfEntityRepositoryBase<Portfolio>,IPortfolioRepository
     {
+        private readonly DbContext _context;
         public PortfolioRepository(DbContext context) : base(context)
         {
-        } 
+            _context = context;
+        }
     }
 }

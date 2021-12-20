@@ -19,16 +19,15 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete
         {
             _context = context;
         }
-
-        public async Task<bool> SignInUser(User user)
+        public async Task<int> SignInUser(User user)
         {
 
             var result =await _context.Set<User>().FirstOrDefaultAsync(x => x.UserName.Equals(user.UserName) && x.UserPassword.Equals(user.UserPassword));
             if (result != null)
             {
-                return true;
+                return result.Id;
             }
-            return  false;
+            return  -1;
         }
     }
 }
