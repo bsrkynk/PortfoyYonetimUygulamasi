@@ -22,10 +22,10 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Mappings
 
             builder.HasOne<Portfolio>(a => a.Portfolio).WithMany(c => c.Transactions).HasForeignKey(a => a.PortfolioId);
 
-            builder.HasOne<TransactionType>(a => a.TransactionType).WithOne(c => c.Transaction)
-                .HasForeignKey<TransactionType>(v => v.TransactionId);
+            //builder.HasOne<TransactionType>(a => a.TransactionType).WithOne(c => c.Transaction )
+            //    .HasForeignKey<TransactionType>(v => v.Transaction);
 
-            builder.HasOne<Coin>(a => a.Coin).WithMany(c => c.Transactions).HasForeignKey(x => x.CoinId);
+          //  builder.HasOne<Coin>(a => a.Coin).WithMany(c => c.Transactions).HasForeignKey(x => x.CoinId);
 
 
             builder.Property(a => a.IsDeleted).IsRequired(true);

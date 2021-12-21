@@ -19,35 +19,44 @@
 </script>
 <script type="text/javascript">
     $('#createPortfolioModal').on('shown.bs.modal',
-        function () {
+        function() {
             $('#btnCreatePortfolio').trigger('focus');
         });
     $('#createTransactionModal').on('shown.bs.modal',
-        function () {
+        function() {
             $('#btnCreateTransaction').trigger('focus');
         });
-    $(function () {
+    $(function() {
         $("#coins").select2();
         console.log("gird");
     });
-  function DdlChange(val) {
 
-      var selected = val;
+    function DdlChange(val) {
+
+        var selected = val;
         console.log(selected);
-      $.ajax({
-          type: "POST",
-          dataType: "json",
-          url: '@Url.Action("GetCoinName","Portfolio")',
-          data: { Id: selected },
-          success: function(response) {
-              var price = jQuery.parseJSON(response);
-              $("#txtPrice").val(price);
-          },
-          error: function (response){
-              console.log("basarisiz");
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: '@Url.Action("GetCoinName", "Portfolio")',
+            data: { Id: selected },
+            success: function(response) {
+                var price = jQuery.parseJSON(response);
+                $("#txtPrice").val(price);
+            },
+            error: function(response) {
+                console.log("basarisiz");
 
-          }
-  }); }
+            }
+        });
+    }
+
+    function CalculateTotalAmount(val) {
+        var amount=$("#txtAmount").val();
+        var price=$("#txtPrice").val();
+        var totalAmount = amount * price;
+        $("#txtTotalAmount").val(totalAmount);
+    }
 </script>
 
 <button type="button" class="btn btn-dark btn-lg btn-block" id="btnCreatePortfolio" data-toggle="modal" data-target="#createPortfolioModal">Portföy Oluştur</button>
@@ -94,11 +103,15 @@
 
                         <div class="tab-content">
                             <div class="tab-pane active" id="buy">
-                                @Html.DropDownListFor(x => x.CreateWalletDto.CoinName,
+                                Coin Seçiniz
+                                @Html.DropDownListFor(x => x.CreateTransactionDto.CoinName,
                                     (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", id = "coins", @onchange = "DdlChange(this.value)" })
-                                @Html.TextBoxFor(m => m.CreateWalletDto.CoinPrice , new {@type="text",@readonly="readonly",@id= "txtPrice" })
-                                @Html.TextBoxFor(m => m.CreateWalletDto.CoinAmount , new {@type="text",@id= "txtAmount" })
-                                @Html.LabelFor(m => m.CreateWalletDto.CoinAmount , new {@type="text",@id= "txtAmount" })
+                                Coin Fiyatı
+                                @Html.TextBoxFor(m => m.CreateTransactionDto.CoinPrice , new {@type="text",@readonly="readonly",@id= "txtPrice" })<br/>
+                                Adet
+                                @Html.TextBoxFor(m => m.CreateTransactionDto.CoinAmount , new {@type="text",@id= "txtAmount", @onchange="CalculateTotalAmount(this.value)" })
+                               Toplam Tutar
+                                @Html.TextBoxFor(m => m.CreateTransactionDto.TotalAmount , new {@type="text",@id= "txtTotalAmount" })
                             </div>
 
                             <div class="tab-pane" id="sell">

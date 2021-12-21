@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace PortfoyYonetimUygulamasi.Entity.Dtos
 {
-    public class CreateWalletDto
+    public class CreateTransactionDto
     {
         public string CoinName { get; set; }
-        public int CoinPrice { get; set; }
-        public int CoinAmount { get; set; }
+        public double CoinPrice { get; set; }
+        public double CoinAmount { get; set; }
+        public double TotalAmount { get; set; }
     }
 }
