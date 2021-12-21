@@ -13,7 +13,7 @@ namespace PortfoyYonetimUygulamasi.MVC.ViewModels
         public bool CheckPortfolioPartial { get; set; } = false;
         public List<Portfolio> UserPortfolioes { get; set; }
         public int PortfolioId { get; set; }
-        public List<CreateWalletDto> Coins { get; set; }
-        public CreateWalletDto CreateWalletDto { get; set; }
+        public List<CreateTransactionDto> Coins { get; set; }
+        public CreateTransactionDto CreateTransactionDto { get; set; }
     }
 }

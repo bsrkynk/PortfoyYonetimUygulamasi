@@ -10,7 +10,7 @@ namespace PortfoyYonetimUygulamasi.Host.Abstract
 {
     public  interface IPortfolioService
     {
-        Task Add(CreatePortfolioDto userAddDto);
+        Task AddPortfolio(CreatePortfolioDto userAddDto);
         Task<List<Portfolio>> GetAllUserPortfolios(int userId);
         public Task<List<Portfolio>> GetUserPortfolio(int portfolioId);
     }

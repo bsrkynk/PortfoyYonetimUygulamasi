@@ -43,7 +43,7 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
             return View(_portfolioViewModel);
         }
         [Microsoft.AspNetCore.Mvc.HttpPost]
-        public async Task<IActionResult> Index(int id, bool check)
+        public async Task<IActionResult> Index(int id, bool check)//////////////////////////////////////////////////////////PORTFÖY ID=COİN KAYDEDERKEN PORTFÖYDEN WALLETI BUL, TRANSACTION YAPARKEN BUNU KULLAN, WALLETA YAZDIMAK İÇİN BUNA BAK. İKİ NUMARALI PORTFÖY 1 NUMARALI WALLETI VE OLUŞTURULAN COİNİ KULLANIYOR ONA GÖRE YAZ SESSİONA AT
         {
             var portfolios = await _portfolioService.GetUserPortfolio(id);
             if (portfolios != null)
@@ -69,9 +69,6 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
                             select new SelectListItem
                             {
                                 Text = i.symbol
-                          
-                                
-                                
                             }).ToList();
             ViewBag.dgr = coinNames;
             _portfolioViewModel.CheckPortfolioPartial = check;
@@ -80,7 +77,7 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         public JsonResult GetCoinName(string id)
         {
             List<_24HourExchange> _24HourExchangeList = Home.HomeIndex();
-            var price = _24HourExchangeList.Where(x => x.symbol == id).Select(y => y.lastPrice).FirstOrDefault();
+            var price = _24HourExchangeList.Where(x => x.symbol == id).Select(y => y.lastPrice).FirstOrDefault(); 
             var pricee = System.Text.Json.JsonSerializer.Serialize(price);
             return Json(pricee);
         }
@@ -89,7 +86,7 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         public async Task<IActionResult> CreatePortfolio(PortfolioViewModel portPortfolioViewModel)
         {
             portPortfolioViewModel.createPortfolioDto.UserId = Convert.ToInt32(/*HttpContext.Session.GetInt32("USERNAME")*/1);
-            await _portfolioService.Add(portPortfolioViewModel.createPortfolioDto);
+            await _portfolioService.AddPortfolio(portPortfolioViewModel.createPortfolioDto);
             return RedirectToAction("Index");
         }
     }

@@ -17,5 +17,6 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete
         {
             _context = context;
         }
+
     }
 }

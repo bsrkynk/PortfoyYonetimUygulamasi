@@ -19,9 +19,11 @@ namespace PortfoyYonetimUygulamasi.Entity.Concrete
         /// miktar çarpı fiyatı belirtir.
         /// </summary>
         public double TotalPrice { get; set; }
-        public int CoinId { get; set; }
-        public Coin Coin { get; set; }
+        public string CoinName { get; set; }
+        //   public int CoinId { get; set; }
+        //    public Coin Coin { get; set; }
         public TransactionType TransactionType { get; set; }
+        public int TransactionTypeId { get; set; }
         public int PortfolioId { get; set; }
         public Portfolio Portfolio { get; set; } //bir transaction bir portföye ait olabilir
     }

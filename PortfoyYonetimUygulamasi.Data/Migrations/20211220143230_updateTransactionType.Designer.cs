@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts;
 
 namespace PortfoyYonetimUygulamasi.Data.Migrations
 {
     [DbContext(typeof(PortfoyYonetimUygulamasiContext))]
-    partial class PortfoyYonetimUygulamasiContextModelSnapshot : ModelSnapshot
+    [Migration("20211220143230_updateTransactionType")]
+    partial class updateTransactionType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -98,8 +100,8 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
                     b.Property<double>("Amount")
                         .HasColumnType("float");
 
-                    b.Property<string>("CoinName")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("CoinId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -120,6 +122,8 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CoinId");
 
                     b.HasIndex("PortfolioId");
 
@@ -254,6 +258,12 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
 
             modelBuilder.Entity("PortfoyYonetimUygulamasi.Entity.Concrete.Transaction", b =>
                 {
+                    b.HasOne("PortfoyYonetimUygulamasi.Entity.Concrete.Coin", "Coin")
+                        .WithMany("Transactions")
+                        .HasForeignKey("CoinId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("PortfoyYonetimUygulamasi.Entity.Concrete.Portfolio", "Portfolio")
                         .WithMany("Transactions")
                         .HasForeignKey("PortfolioId")
@@ -265,6 +275,8 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
                         .HasForeignKey("PortfoyYonetimUygulamasi.Entity.Concrete.Transaction", "TransactionTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Coin");
 
                     b.Navigation("Portfolio");
 
@@ -280,6 +292,11 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Portfolio");
+                });
+
+            modelBuilder.Entity("PortfoyYonetimUygulamasi.Entity.Concrete.Coin", b =>
+                {
+                    b.Navigation("Transactions");
                 });
 
             modelBuilder.Entity("PortfoyYonetimUygulamasi.Entity.Concrete.Portfolio", b =>
