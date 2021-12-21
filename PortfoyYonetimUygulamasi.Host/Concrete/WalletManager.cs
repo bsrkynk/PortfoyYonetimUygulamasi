@@ -9,7 +9,7 @@ using PortfoyYonetimUygulamasi.Host.Abstract;
 
 namespace PortfoyYonetimUygulamasi.Host.Concrete
 {
-    public class WalletManager:IWalletService
+    public class WalletManager : IWalletService
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -17,7 +17,7 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<int> InitialWalletCreate(int portfolioId)
+        public async Task<int> InitialWalletCreate(int portfolioId) //portföy oluşturulurken wallet da boş olarak oluşturuluyor
         {
             Wallet wallet = new Wallet
             {
@@ -29,11 +29,16 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
                 PortfolioId = portfolioId
 
             };
-
             await _unitOfWork.Wallets.AddAsync(wallet);
+            await _unitOfWork.SaveAsync();
+            return wallet.Id;
+        }
 
-                await _unitOfWork.SaveAsync();
-                return wallet.Id;
+        public async Task<int> GetCreatedWalletId(int portfolioId)
+        {
+            var wallet=await _unitOfWork.Wallets.GetAsync(x => x.Id == portfolioId);
+            return wallet.Id;
+
         }
 
     }

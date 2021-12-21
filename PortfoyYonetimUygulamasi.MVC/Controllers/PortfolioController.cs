@@ -45,25 +45,13 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         [Microsoft.AspNetCore.Mvc.HttpPost]
         public async Task<IActionResult> Index(int id, bool check)//////////////////////////////////////////////////////////PORTFÖY ID=COİN KAYDEDERKEN PORTFÖYDEN WALLETI BUL, TRANSACTION YAPARKEN BUNU KULLAN, WALLETA YAZDIMAK İÇİN BUNA BAK. İKİ NUMARALI PORTFÖY 1 NUMARALI WALLETI VE OLUŞTURULAN COİNİ KULLANIYOR ONA GÖRE YAZ SESSİONA AT
         {
+            HttpContext.Session.SetInt32("PortfolioId", id);
             var portfolios = await _portfolioService.GetUserPortfolio(id);
             if (portfolios != null)
             {
                 _portfolioViewModel.UserPortfolioes = portfolios;
-
-
             }
-            //CreateWalletDto createWalletDto=new CreateWalletDto();
-            //_portfolioViewModel.Coins=new List<CreateWalletDto>();
-            
             List<_24HourExchange> _24HourExchangeList = Home.HomeIndex();
-            //foreach (var x in _24HourExchangeList.ToList())
-            //{
-            //    createWalletDto.CoinName = x.symbol;
-            //    _portfolioViewModel.Coins.Add(createWalletDto);
-
-            //}
-
-            //var _sdf = _portfolioViewModel.Coins.ToList();
 
             var coinNames = (from i in _24HourExchangeList.ToList()
                             select new SelectListItem
@@ -89,5 +77,10 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
             await _portfolioService.AddPortfolio(portPortfolioViewModel.createPortfolioDto);
             return RedirectToAction("Index");
         }
+
+        //public async Task<IActionResult> BeginTransaction()
+        //{
+
+        //}
     }
 }
