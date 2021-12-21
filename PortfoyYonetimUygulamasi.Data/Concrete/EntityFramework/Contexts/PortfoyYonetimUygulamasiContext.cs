@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Mappings;
+using PortfoyYonetimUygulamasi.Entity;
 using PortfoyYonetimUygulamasi.Entity.Concrete;
 
 namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts
@@ -17,6 +18,7 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts
         public DbSet<TransactionType> TransactionTypes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Wallet> Wallets { get; set; }
+        public DbSet<CoinWallet> CoinWallets { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,6 +35,7 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts
                 modelBuilder.ApplyConfiguration(new TransactionTypeMap());
                 modelBuilder.ApplyConfiguration(new UserMap());
                 modelBuilder.ApplyConfiguration(new WalletMap());
+                modelBuilder.ApplyConfiguration(new CoinWalletMap());
             
         }
     }

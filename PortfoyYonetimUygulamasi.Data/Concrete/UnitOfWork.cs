@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using PortfoyYonetimUygulamasi.Data.Abstract;
 using PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts;
+using PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Repositories;
+using PortfoyYonetimUygulamasi.Entity;
 
 namespace PortfoyYonetimUygulamasi.Data.Concrete
 {
@@ -17,6 +19,7 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete
         private TransactionTypeRepository _transactionTypeRepository;
         private UserRepository _userRepository;
         private WalletRepository _walletRepository;
+        private ICoinWalletRepository _coinWalletRepository;
 
         public UnitOfWork(PortfoyYonetimUygulamasiContext context)
         {
@@ -30,6 +33,7 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete
         public ITransactionRepository Transactions => _transactionRepository ?? new TransactionRepository(_context);
         public IUserRepository Users => _userRepository ?? new UserRepository(_context);
         public IWalletRepository Wallets => _walletRepository ?? new WalletRepository(_context);
+        public ICoinWalletRepository CoinWallets => _coinWalletRepository ?? new CoinWalletRepository(_context);
         public async Task<int> SaveAsync()
         {
             return await _context.SaveChangesAsync();

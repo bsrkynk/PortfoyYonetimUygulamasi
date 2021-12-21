@@ -14,7 +14,7 @@ namespace PortfoyYonetimUygulamasi.Data.Abstract
         ITransactionRepository Transactions { get; }
         IUserRepository Users { get; }
         IWalletRepository Wallets { get; }
-
+        ICoinWalletRepository CoinWallets { get; }
         Task<int> SaveAsync();
     }
 }

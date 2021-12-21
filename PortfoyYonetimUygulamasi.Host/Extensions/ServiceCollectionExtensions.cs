@@ -22,6 +22,8 @@ namespace PortfoyYonetimUygulamasi.Host.Extensions
             serviceCollection.AddScoped<IPortfolioService, PortfolioManager>();
             serviceCollection.AddScoped<IWalletService, WalletManager>();
             serviceCollection.AddScoped<ICoinService, CoinManager>();
+            serviceCollection.AddScoped<ICoinWalletService, CoinWalletManager>();
+            serviceCollection.AddScoped<ITransactionService, TransactionManager>();
             return serviceCollection;
         }
     }

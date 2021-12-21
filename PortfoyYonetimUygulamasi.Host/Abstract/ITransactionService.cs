@@ -9,6 +9,7 @@ namespace PortfoyYonetimUygulamasi.Host.Abstract
 {
     public interface ITransactionService
     {
-        Task BeginTransaction(AddCoinDto addCoinDto, int instancePortfolioId);
+        Task ManageTransaction(CreateTransactionDto addCoinDto, int instancePortfolioId);
+        Task AddTransaction(CreateTransactionDto addTransactionDto, int instancePortfolioId);
     }
 }

@@ -36,7 +36,7 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
 
         public async Task<int> GetCreatedWalletId(int portfolioId)
         {
-            var wallet=await _unitOfWork.Wallets.GetAsync(x => x.Id == portfolioId);
+            var wallet=await _unitOfWork.Wallets.GetAsync(x => x.PortfolioId == portfolioId);
             return wallet.Id;
 
         }

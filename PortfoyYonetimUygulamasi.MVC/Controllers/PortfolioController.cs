@@ -14,6 +14,7 @@ using PortfoyYonetimUygulamasi.Host.Abstract;
 using PortfoyYonetimUygulamasi.Host.Controllers.User;
 using PortfoyYonetimUygulamasi.MVC.Filters;
 using PortfoyYonetimUygulamasi.MVC.ViewModels;
+using RestSharp;
 using Controller = Microsoft.AspNetCore.Mvc.Controller;
 using SelectListItem = Microsoft.AspNetCore.Mvc.Rendering.SelectListItem;
 using JsonResult = Microsoft.AspNetCore.Mvc.JsonResult;
@@ -24,11 +25,13 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
     public class PortfolioController : Controller
     {
         private readonly IPortfolioService _portfolioService;
+        private readonly ITransactionService _transactionService;
         private readonly PortfolioViewModel _portfolioViewModel;
-        public PortfolioController(IPortfolioService portfolioService, PortfolioViewModel portfolioViewModel)
+        public PortfolioController(IPortfolioService portfolioService, PortfolioViewModel portfolioViewModel, ITransactionService transactionService)
         {
             _portfolioService = portfolioService;
             _portfolioViewModel = portfolioViewModel;
+            _transactionService = transactionService;
         }
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public async Task<IActionResult> Index()
@@ -78,9 +81,12 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
             return RedirectToAction("Index");
         }
 
-        //public async Task<IActionResult> BeginTransaction()
-        //{
-
-        //}
+        public async Task<IActionResult> BeginTransaction(CreateTransactionDto createTransactionDto)
+        {
+            var portfolioId =  Convert.ToInt32(HttpContext.Session.GetInt32("PortfolioId"));
+            createTransactionDto.TransactionType = 4;
+         await _transactionService.ManageTransaction(createTransactionDto, portfolioId);
+         return RedirectToAction("Index");
+        }
     }
 }
