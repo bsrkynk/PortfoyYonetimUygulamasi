@@ -54,8 +54,6 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
 
             await _unitOfWork.Portfolios.UpdateAsync(portfolioss);
             await _unitOfWork.SaveAsync();
-
-
         }
 
         public async Task<List<Portfolio>> GetAllUserPortfolios(int userId)

@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PortfoyYonetimUygulamasi.Entity.Dtos;
 
 namespace PortfoyYonetimUygulamasi.Host.Abstract
 {
-    public interface ICoinService
+    public interface ICoinWalletService
     {
-        Task<int> AddCoin(CreateTransactionDto addCoinDto);
+        Task AddCoinWallet(int coinId, int walletId);
     }
 }

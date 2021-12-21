@@ -9,8 +9,9 @@ namespace PortfoyYonetimUygulamasi.Entity.Dtos
     public class CreateTransactionDto
     {
         public string CoinName { get; set; }
-        public double CoinPrice { get; set; }
-        public double CoinAmount { get; set; }
-        public double TotalAmount { get; set; }
+        public string CoinPrice { get; set; }
+        public string CoinAmount { get; set; }
+        public string TotalAmount { get; set; }
+        public int TransactionType { get; set; }
     }
 }

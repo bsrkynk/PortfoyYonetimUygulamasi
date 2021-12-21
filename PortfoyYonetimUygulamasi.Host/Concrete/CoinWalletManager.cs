@@ -5,29 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 using PortfoyYonetimUygulamasi.Data.Abstract;
 using PortfoyYonetimUygulamasi.Entity.Concrete;
-using PortfoyYonetimUygulamasi.Entity.Dtos;
 using PortfoyYonetimUygulamasi.Host.Abstract;
 
 namespace PortfoyYonetimUygulamasi.Host.Concrete
 {
-    public class CoinManager:ICoinService
+    public class CoinWalletManager:ICoinWalletService
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public CoinManager(IUnitOfWork unitOfWork)
+        public CoinWalletManager(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<int> AddCoin(CreateTransactionDto addCoinDto)
+        public async Task AddCoinWallet(int coinId,int walletId)
         {
-            Coin addCoin = new Coin
+            CoinWallet addCoinWallet = new CoinWallet
             {
-                CoinName = addCoinDto.CoinName ,
-                CoinPrice = addCoinDto.CoinPrice
+             CoinId = coinId,
+             WalletId = walletId,
+             IsActive = true,
+             IsDeleted = false
             };
-            await _unitOfWork.Coins.AddAsync(addCoin);
+            await _unitOfWork.CoinWallets.AddAsync(addCoinWallet);
             await _unitOfWork.SaveAsync();
-            return addCoin.Id; //en son eklenen coinin idsini döndürür
         }
     }
 }
