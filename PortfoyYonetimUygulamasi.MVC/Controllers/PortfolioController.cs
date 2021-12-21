@@ -84,7 +84,7 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         public async Task<IActionResult> BeginTransaction(CreateTransactionDto createTransactionDto)
         {
             var portfolioId =  Convert.ToInt32(HttpContext.Session.GetInt32("PortfolioId"));
-            createTransactionDto.TransactionType = 4;
+            createTransactionDto.TransactionType = "Buy";
          await _transactionService.ManageTransaction(createTransactionDto, portfolioId);
          return RedirectToAction("Index");
         }

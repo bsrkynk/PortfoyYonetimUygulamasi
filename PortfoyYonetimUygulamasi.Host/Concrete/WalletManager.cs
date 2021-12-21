@@ -21,11 +21,11 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
         {
             Wallet wallet = new Wallet
             {
-                AmountOfCoin = 0,
-                AvarageBuyPrice = 0,
+                AmountOfCoin = "0",
+                AvarageBuyPrice = "0",
                 IsActive = true,
                 IsDeleted = false,
-                TotalWealth = 0,
+                TotalWealth = "0",
                 PortfolioId = portfolioId
 
             };

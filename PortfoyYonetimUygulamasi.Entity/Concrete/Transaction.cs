@@ -10,20 +10,20 @@ namespace PortfoyYonetimUygulamasi.Entity.Concrete
         /// <summary>
         /// işlemin miktarını belirtir. 
         /// </summary>
-        public double Amount { get; set; }
+        public string Amount { get; set; }
         /// <summary>
         /// yapılan işlemin fiyatını belirtir.
         /// </summary>
-        public double TransactionPrice { get; set; }
+        public string TransactionPrice { get; set; }
         /// <summary>
         /// miktar çarpı fiyatı belirtir.
         /// </summary>
-        public double TotalPrice { get; set; }
+        public string TotalPrice { get; set; }
         public string CoinName { get; set; }
         //   public int CoinId { get; set; }
         //    public Coin Coin { get; set; }
-        public TransactionType TransactionType { get; set; }
-        public int TransactionTypeId { get; set; }
+
+        public string TransactionType { get; set; }
         public int PortfolioId { get; set; }
         public Portfolio Portfolio { get; set; } //bir transaction bir portföye ait olabilir
     }

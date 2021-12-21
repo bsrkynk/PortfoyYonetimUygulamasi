@@ -37,9 +37,9 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
             await _unitOfWork.SaveAsync();
             int createdPortfolioId = portfolio.Id;
             int createdWalletId = await _walletService.InitialWalletCreate(createdPortfolioId); //her portföyün bir wallet ı olacağı için portföy oluşturulurken wallet da oluşturuluyor
-            var portfolios = await _unitOfWork.Portfolios.GetAllAsync(x => x.Id == createdPortfolioId);
-            var sdf = portfolios.FirstOrDefault() ;
-            sdf.WalletId = createdWalletId;
+            //var portfolios = await _unitOfWork.Portfolios.GetAllAsync(x => x.Id == createdPortfolioId);
+            //var sdf = portfolios.FirstOrDefault() ;
+            //sdf.WalletId = createdWalletId;
             
             Portfolio portfolioss = new Portfolio
             {
@@ -47,11 +47,9 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
                 UserId = createPortfolioDto.UserId,
                 IsActive = true,
                 IsDeleted = false,
-                WalletId = sdf.WalletId,
-                Id= createdWalletId
-
+                WalletId =createdWalletId,// sdf.WalletId,
+                Id= createdWalletId//createdWalletId
             };
-
             await _unitOfWork.Portfolios.UpdateAsync(portfolioss);
             await _unitOfWork.SaveAsync();
         }

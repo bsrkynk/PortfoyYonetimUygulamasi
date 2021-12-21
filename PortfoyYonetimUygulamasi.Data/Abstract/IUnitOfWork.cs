@@ -10,7 +10,6 @@ namespace PortfoyYonetimUygulamasi.Data.Abstract
     {
         ICoinRepository Coins { get; } //unitofWork.Coins diyerek erişilir
         IPortfolioRepository  Portfolios { get; }
-        ITransactionTypeRepository TransactionTypes { get; }
         ITransactionRepository Transactions { get; }
         IUserRepository Users { get; }
         IWalletRepository Wallets { get; }
