@@ -12,6 +12,6 @@ namespace PortfoyYonetimUygulamasi.Entity.Dtos
         public string CoinPrice { get; set; }
         public string CoinAmount { get; set; }
         public string TotalAmount { get; set; }
-        public int TransactionType { get; set; }
+        public string TransactionType { get; set; }
     }
 }

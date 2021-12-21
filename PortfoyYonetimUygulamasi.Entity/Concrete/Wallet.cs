@@ -10,16 +10,16 @@ namespace PortfoyYonetimUygulamasi.Entity.Concrete
         /// <summary>
         ///ortalama satın alma fiyatı,her transaction tablosunda işlem olduğunda hesaplanarak geçmiş alış satışlar üzerinden hesaplanarak yazdırılır.
         /// </summary>
-        public double AvarageBuyPrice { get; set; }
+        public string AvarageBuyPrice { get; set; }
 
         /// <summary>
         /// toplam varlık, transaction tablosunda işlem olduğunda hesaplanır.
         /// </summary>
-        public double TotalWealth { get; set; }
+        public string TotalWealth { get; set; }
         /// <summary>
         /// toplam coin sayısı transaction tablosunda işlem olduuğnda hesaplanır. eldeki toplam coini gösterir. 
         /// </summary>
-        public double AmountOfCoin { get; set; }
+        public string AmountOfCoin { get; set; }
         public int PortfolioId { get; set; }
         public Portfolio Portfolio { get; set; } //bir wallet bir portföye ait olabilir
 

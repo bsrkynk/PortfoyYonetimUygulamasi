@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts;
 
 namespace PortfoyYonetimUygulamasi.Data.Migrations
 {
     [DbContext(typeof(PortfoyYonetimUygulamasiContext))]
-    partial class PortfoyYonetimUygulamasiContextModelSnapshot : ModelSnapshot
+    [Migration("20211221165738_changingTableType")]
+    partial class changingTableType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -205,11 +207,11 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("AmountOfCoin")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("AmountOfCoin")
+                        .HasColumnType("float");
 
-                    b.Property<string>("AvarageBuyPrice")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("AvarageBuyPrice")
+                        .HasColumnType("float");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -220,8 +222,8 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
                     b.Property<int>("PortfolioId")
                         .HasColumnType("int");
 
-                    b.Property<string>("TotalWealth")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("TotalWealth")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 

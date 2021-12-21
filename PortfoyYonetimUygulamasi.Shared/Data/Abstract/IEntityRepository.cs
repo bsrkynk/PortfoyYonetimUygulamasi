@@ -17,6 +17,6 @@ namespace PortfoyYonetimUygulamasi.Shared.Data.Abstract
         Task DeleteAsync(T entity);
         Task<bool> AnyAsync(Expression<Func<T, bool>> predicate); //kayıdın önceden var mı yok mu bakılması için
         Task<int> CountAsync(Expression<Func<T, bool>> predicate);  //kayıtların sayısını vs bulmak için 
-
+        void DetachEntity();
     }
 }

@@ -15,7 +15,6 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts
         public DbSet<Coin> Coins { get; set; }
         public DbSet<Portfolio> Portfolios { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
-        public DbSet<TransactionType> TransactionTypes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Wallet> Wallets { get; set; }
         public DbSet<CoinWallet> CoinWallets { get; set; }
@@ -24,6 +23,7 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts
         {
             optionsBuilder.UseSqlServer(
                 "Server=.;Database=PortYonetimUygulamasi;Trusted_Connection=True;Connect Timeout=30;MultipleActiveResultSets=True;");
+            optionsBuilder.EnableSensitiveDataLogging();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -32,7 +32,6 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts
                 modelBuilder.ApplyConfiguration(new CoinMap());
                 modelBuilder.ApplyConfiguration(new PortfolioMap());
                 modelBuilder.ApplyConfiguration(new TransactionMap());
-                modelBuilder.ApplyConfiguration(new TransactionTypeMap());
                 modelBuilder.ApplyConfiguration(new UserMap());
                 modelBuilder.ApplyConfiguration(new WalletMap());
                 modelBuilder.ApplyConfiguration(new CoinWalletMap());

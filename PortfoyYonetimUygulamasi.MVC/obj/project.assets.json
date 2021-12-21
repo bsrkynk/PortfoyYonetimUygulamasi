@@ -7433,11 +7433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.MVC\\PortfoyYonetimUygulamasi.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.MVC\\PortfoyYonetimUygulamasi.MVC.csproj",
       "projectName": "PortfoyYonetimUygulamasi.MVC",
-      "projectPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.MVC\\PortfoyYonetimUygulamasi.MVC.csproj",
+      "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.MVC\\PortfoyYonetimUygulamasi.MVC.csproj",
       "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.MVC\\obj\\",
+      "outputPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7454,8 +7454,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Host\\PortfoyYonetimUygulamasi.Host.csproj": {
-              "projectPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Host\\PortfoyYonetimUygulamasi.Host.csproj"
+            "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Host\\PortfoyYonetimUygulamasi.Host.csproj": {
+              "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Host\\PortfoyYonetimUygulamasi.Host.csproj"
             }
           }
         }

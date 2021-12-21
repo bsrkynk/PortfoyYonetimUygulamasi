@@ -16,10 +16,9 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete
         private CoinRepository _conCoinRepository;
         private PortfolioRepository _portfolioRepository;
         private TransactionRepository _transactionRepository;
-        private TransactionTypeRepository _transactionTypeRepository;
         private UserRepository _userRepository;
         private WalletRepository _walletRepository;
-        private ICoinWalletRepository _coinWalletRepository;
+        private CoinWalletRepository _coinWalletRepository;
 
         public UnitOfWork(PortfoyYonetimUygulamasiContext context)
         {
@@ -29,7 +28,6 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete
     
         public ICoinRepository Coins => _conCoinRepository ?? new CoinRepository(_context);
         public IPortfolioRepository Portfolios => _portfolioRepository ?? new PortfolioRepository(_context);
-        public ITransactionTypeRepository TransactionTypes => _transactionTypeRepository ?? new TransactionTypeRepository(_context);
         public ITransactionRepository Transactions => _transactionRepository ?? new TransactionRepository(_context);
         public IUserRepository Users => _userRepository ?? new UserRepository(_context);
         public IWalletRepository Wallets => _walletRepository ?? new WalletRepository(_context);
