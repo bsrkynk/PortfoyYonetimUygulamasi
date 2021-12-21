@@ -14,23 +14,20 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
     {
         private readonly IUnitOfWork _UnitOfWork;
         private readonly ICoinService _coinService;
-        public TransactionManager(IUnitOfWork unitOfWork, ICoinService coinService)
+        private readonly IWalletService _walletService;
+        public TransactionManager(IUnitOfWork unitOfWork, ICoinService coinService, IWalletService walletService)
         {
             _UnitOfWork = unitOfWork;
             _coinService = coinService;
+            _walletService = walletService;
         }
 
-        public async Task AddCoin(AddCoinDto addCoinDto)
+        public async Task BeginTransaction(AddCoinDto addCoinDto, int instancePortfolioId)
         {
-            Coin addCoin=new Coin
-            {
-                CoinName = addCoinDto.CoinName,
-                CoinPrice = addCoinDto.CoinPrice
-            };
-            await _UnitOfWork.Coins.AddAsync(addCoin);
-            await _UnitOfWork.SaveAsync();
-
+            var addedCoin=await _coinService.AddCoin(addCoinDto); 
+            var addedWallet = await _walletService.GetCreatedWalletId(instancePortfolioId);// her portföyde bir wallet olacağı için çoka çok tablosuna kayıt olması için portföy id den o portföyün walletının idsi bulunuyor.
 
         }
+     
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj": {}
+    "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj": {
+    "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj",
         "projectName": "PortfoyYonetimUygulamasi.Entity",
-        "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj",
+        "projectPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj",
         "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Entity\\obj\\",
+        "outputPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj": {
-                "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj"
+              "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj": {
+                "projectPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj"
               }
             }
           }
@@ -62,14 +62,14 @@
         }
       }
     },
-    "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj": {
+    "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj",
         "projectName": "PortfoyYonetimUygulamasi.Shared",
-        "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj",
+        "projectPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj",
         "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\obj\\",
+        "outputPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiBusra\\PortfoyYonetimUygulamasi.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",

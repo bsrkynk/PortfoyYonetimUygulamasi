@@ -9,5 +9,6 @@ namespace PortfoyYonetimUygulamasi.Host.Abstract
     public interface IWalletService
     {
         Task<int> InitialWalletCreate(int portfolioId);
+        Task<int> GetCreatedWalletId(int portfolioId);
     }
 }
