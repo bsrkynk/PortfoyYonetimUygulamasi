@@ -32,7 +32,7 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
                     IsActive = true,
                     IsDeleted = false
                 };
-                await _unitOfWork.CoinWallets.AddAsync(addCoinWallet);
+                await _unitOfWork.CoinWallets.AddAsync(addCoinWallet); 
                 await _unitOfWork.SaveAsync();
             }
         }
