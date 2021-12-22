@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,7 +54,6 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
             await _UnitOfWork.Transactions.AddAsync(transaction);
             await _UnitOfWork.SaveAsync();
         }
-
         public async Task DoWalletTransaction(CreateTransactionDto createTransactionDto, IEnumerable<CoinWalletJoin> joinedCoinWallet)
         {
             if (createTransactionDto.TransactionType == "Buy")
@@ -63,32 +63,31 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
         }
         public async Task Buy(CreateTransactionDto createTransactionDto, IEnumerable<CoinWalletJoin> joinedCoinWallet)
         {
-
+            var df=double.Parse(createTransactionDto.TotalAmount, CultureInfo.InvariantCulture);
             Wallet wallet = new Wallet();
-            _UnitOfWork.Wallets.DetachEntity();
 
+            _UnitOfWork.Wallets.DetachEntity();
 
             foreach (var coinWallet in joinedCoinWallet)
             {
-                double amountOfCoin = Convert.ToDouble(coinWallet.AmountOfCoin);
-                amountOfCoin += Convert.ToDouble(createTransactionDto.CoinAmount);
-                wallet.AmountOfCoin = amountOfCoin.ToString();
-                double totalWelth = Convert.ToDouble(coinWallet.TotalWelth);
-                totalWelth += Convert.ToDouble(createTransactionDto.CoinPrice) *
-                              Convert.ToDouble(createTransactionDto.CoinAmount);
-                wallet.TotalWealth = totalWelth.ToString();
-                double avarage = Convert.ToDouble(coinWallet.AvarageBuyPrice);
+        
+                var amountOfCoin =double.Parse( coinWallet.AmountOfCoin, CultureInfo.InvariantCulture);
+                amountOfCoin +=double.Parse(createTransactionDto.CoinAmount, CultureInfo.InvariantCulture); ;
+                wallet.AmountOfCoin = amountOfCoin.ToString(CultureInfo.InvariantCulture);
+                var totalWelth = double.Parse( coinWallet.TotalWelth, CultureInfo.InvariantCulture);
+                totalWelth += double.Parse( createTransactionDto.TotalAmount, CultureInfo.InvariantCulture);
+                wallet.TotalWealth = totalWelth.ToString(CultureInfo.InvariantCulture);
+                var avarage =double.Parse( coinWallet.AvarageBuyPrice, CultureInfo.InvariantCulture);
                 avarage = totalWelth / amountOfCoin;
-                wallet.AvarageBuyPrice = avarage.ToString();
+                wallet.AvarageBuyPrice = avarage.ToString(CultureInfo.InvariantCulture);
                 wallet.PortfolioId = coinWallet.PortfolioId;
                 wallet.Id = coinWallet.WalletId;
             }
-
             wallet.IsDeleted = false;
             wallet.IsActive = true;
 
-            await _UnitOfWork.Wallets.UpdateAsync(wallet).ContinueWith(t=>_UnitOfWork.SaveAsync());
-       //     await _UnitOfWork.SaveAsync(); //ContinueWith(x =>
+            await _UnitOfWork.Wallets.UpdateAsync(wallet); //.ContinueWith(t=>_UnitOfWork.SaveAsync())
+            await _UnitOfWork.SaveAsync(); //ContinueWith(x =>
 
         }
 

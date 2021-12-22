@@ -22,15 +22,19 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
         }
         public async Task AddCoinWallet(int coinId, int walletId)
         {
-            CoinWallet addCoinWallet = new CoinWallet
+            var isExist = await _unitOfWork.CoinWallets.AnyAsync(x => x.CoinId == coinId && x.WalletId == walletId);
+            if (!isExist)
             {
-                CoinId = coinId,
-                WalletId = walletId,
-                IsActive = true,
-                IsDeleted = false
-            };
-            await _unitOfWork.CoinWallets.AddAsync(addCoinWallet);
-            await _unitOfWork.SaveAsync();
+                CoinWallet addCoinWallet = new CoinWallet
+                {
+                    CoinId = coinId,
+                    WalletId = walletId,
+                    IsActive = true,
+                    IsDeleted = false
+                };
+                await _unitOfWork.CoinWallets.AddAsync(addCoinWallet);
+                await _unitOfWork.SaveAsync();
+            }
         }
 
         public async Task<IEnumerable<CoinWalletJoin>> GetUnifiedCoinWallet(int coinId, int walletId)

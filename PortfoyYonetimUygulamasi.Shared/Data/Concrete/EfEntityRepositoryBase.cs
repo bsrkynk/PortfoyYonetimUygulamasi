@@ -56,7 +56,6 @@ namespace PortfoyYonetimUygulamasi.Shared.Data.Concrete
             }
             return await query.ToListAsync();
         }
-
         public async Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> Predicate)
         {
             IQueryable<TEntity> query = _context.Set<TEntity>();//.AsNoTracking();
@@ -67,14 +66,11 @@ namespace PortfoyYonetimUygulamasi.Shared.Data.Concrete
             }
             return await query.SingleOrDefaultAsync();
         }
-
         public async Task<TEntity> UpdateAsync(TEntity entity)
         {
-            await Task.Run(() => { _context.Set<TEntity>().Update(entity); });
-            
+            await Task.Run(() => { _context.Set<TEntity>().Update(entity);});
             return entity;
         }
-
         public  void DetachEntity()
         {
              _context.ChangeTracker.Clear();

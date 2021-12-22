@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts;
 
 namespace PortfoyYonetimUygulamasi.Data.Migrations
 {
     [DbContext(typeof(PortfoyYonetimUygulamasiContext))]
-    partial class PortfoyYonetimUygulamasiContextModelSnapshot : ModelSnapshot
+    [Migration("20211222183415_createdUniqueIndexOnCoins")]
+    partial class createdUniqueIndexOnCoins
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,9 +57,6 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CoinName")
-                        .IsUnique();
 
                     b.ToTable("Coins");
                 });

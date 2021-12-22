@@ -9,7 +9,7 @@ using PortfoyYonetimUygulamasi.Entity.Concrete;
 
 namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Mappings
 {
- public   class PortfolioMap : IEntityTypeConfiguration<Portfolio>
+    public class PortfolioMap : IEntityTypeConfiguration<Portfolio>
     {
         public void Configure(EntityTypeBuilder<Portfolio> builder)
         {
@@ -17,8 +17,8 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Mappings
             builder.Property(a => a.Id).ValueGeneratedOnAdd();//bir bir artmasını sağlıyor
 
             builder.HasOne<User>(a => a.User).WithMany(c => c.Portfolios).HasForeignKey(a => a.UserId);
-            builder.HasOne<Wallet>(a => a.Wallet).WithOne(c =>c.Portfolio )
-                .HasForeignKey<Wallet>(v => v.PortfolioId  );
+            builder.HasOne<Wallet>(a => a.Wallet).WithOne(c => c.Portfolio)
+                .HasForeignKey<Wallet>(v => v.PortfolioId);
 
             builder.Property(a => a.IsDeleted).IsRequired(true);
             builder.Property(a => a.IsActive).IsRequired(true);

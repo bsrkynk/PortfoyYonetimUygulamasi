@@ -20,14 +20,26 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
         }
         public async Task<int> AddCoin(CreateTransactionDto addCoinDto)
         {
-            Coin addCoin = new Coin
+            var isExist=await _unitOfWork.Coins.AnyAsync(x => x.CoinName == addCoinDto.CoinName);
+
+            if (isExist)
             {
-                CoinName = addCoinDto.CoinName ,
-                CoinPrice = addCoinDto.CoinPrice
-            };
-            await _unitOfWork.Coins.AddAsync(addCoin);
-            await _unitOfWork.SaveAsync();
-            return addCoin.Id; //en son eklenen coinin idsini döndürür
+                var coin = await _unitOfWork.Coins.GetAllAsync(x => x.CoinName == addCoinDto.CoinName);
+                var coinId = coin.Select(x => x.Id).FirstOrDefault();
+                return coinId;
+            }
+            else
+            {
+                Coin addCoin = new Coin
+                {
+                    CoinName = addCoinDto.CoinName,
+                    CoinPrice = addCoinDto.CoinPrice
+                };
+                await _unitOfWork.Coins.AddAsync(addCoin);
+                await _unitOfWork.SaveAsync();
+                return addCoin.Id; //en son eklenen coinin idsini döndürür
+            }
+            
         }
     }
 }

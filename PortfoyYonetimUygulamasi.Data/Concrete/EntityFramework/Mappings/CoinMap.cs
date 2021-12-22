@@ -17,7 +17,7 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Mappings
             builder.Property(a => a.Id).ValueGeneratedOnAdd();//bir bir artmasını sağlıyor
             builder.Property(a => a.CoinName).HasMaxLength(100);
             builder.Property(a => a.CoinName).IsRequired(true);
-
+            builder.HasIndex(a => a.CoinName).IsUnique(true);
             builder.Property(a => a.IsDeleted).IsRequired(true);
             builder.Property(a => a.IsActive).IsRequired(true);
 
