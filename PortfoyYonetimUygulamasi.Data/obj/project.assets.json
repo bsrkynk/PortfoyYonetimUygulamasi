@@ -5804,11 +5804,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\PortfoyYonetimUygulamasi.Data.csproj",
+      "projectUniqueName": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\PortfoyYonetimUygulamasi.Data.csproj",
       "projectName": "PortfoyYonetimUygulamasi.Data",
-      "projectPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\PortfoyYonetimUygulamasi.Data.csproj",
+      "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\PortfoyYonetimUygulamasi.Data.csproj",
       "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\obj\\",
+      "outputPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5825,11 +5825,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj": {
-              "projectPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj"
+            "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj": {
+              "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj"
             },
-            "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj": {
-              "projectPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj"
+            "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj": {
+              "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj"
             }
           }
         }

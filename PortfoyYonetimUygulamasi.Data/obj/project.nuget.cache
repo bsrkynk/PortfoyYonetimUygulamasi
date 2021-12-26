@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5BRmnk4/x5JGsA3kX8XQF7lyIvcdJyI7bHNaH8/MSDRIv3sjjIPk6vx3zak9B1dB+ZggHzKSVxAuE9xtJL3Hjw==",
+  "dgSpecHash": "e7aCVCIeOPL/PSsgealN0kZELu66h1rco6L//NTUUmBicj7skLasGTKNlxT1jO0dZ7c1xs7e+aglnMF7IoKBAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\PortfoyYonetimUygulamasi.Data.csproj",
+  "projectFilePath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\PortfoyYonetimUygulamasi.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hakan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hakan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

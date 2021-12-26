@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BlHAobLcxISlkvu10PX8Nb4q4CeCw+9Lf0Ta6JrAcjZ230uSYpdKfzAKK5qCNGv+sUHCQ4rUOObfcZ9uh/ynOQ==",
+  "dgSpecHash": "lSSaDud9NTxm68/HPs+THISZfPKxWqaSwSZm2mQQzTBOyc954bGJBxoEqAaJGGUq/EKUM4JKVmTu47v/u8QvIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj",
+  "projectFilePath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hakan\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\hakan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",

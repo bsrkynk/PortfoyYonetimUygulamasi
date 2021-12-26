@@ -26,12 +26,14 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
     {
         private readonly IPortfolioService _portfolioService;
         private readonly ITransactionService _transactionService;
+        private readonly ICoinWalletService _coinWalletService;
         private readonly PortfolioViewModel _portfolioViewModel;
-        public PortfolioController(IPortfolioService portfolioService, PortfolioViewModel portfolioViewModel, ITransactionService transactionService)
+        public PortfolioController(IPortfolioService portfolioService, PortfolioViewModel portfolioViewModel, ITransactionService transactionService, ICoinWalletService coinWalletService)
         {
             _portfolioService = portfolioService;
             _portfolioViewModel = portfolioViewModel;
             _transactionService = transactionService;
+            _coinWalletService = coinWalletService;
         }
         [Microsoft.AspNetCore.Mvc.HttpGet]
         public async Task<IActionResult> Index()
@@ -42,6 +44,7 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
             {
                 _portfolioViewModel.UserPortfolioes = portfolios;
             }
+
 
             return View(_portfolioViewModel);
         }
@@ -62,6 +65,8 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
                                 Text = i.symbol
                             }).ToList();
             ViewBag.dgr = coinNames;
+       _portfolioViewModel.CoinWallets =  await _coinWalletService.GetUserWallet(id);
+
             _portfolioViewModel.CheckPortfolioPartial = check;
             return View(_portfolioViewModel);
         }
@@ -85,6 +90,20 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         {
             var portfolioId =  Convert.ToInt32(HttpContext.Session.GetInt32("PortfolioId"));
             createTransactionDto.TransactionType = "Buy";
+         await _transactionService.ManageTransaction(createTransactionDto, portfolioId);
+         return RedirectToAction("Index");
+        } 
+        public async Task<IActionResult> SellTransaction(CreateTransactionDto createTransactionDto)
+        {
+            var portfolioId =  Convert.ToInt32(HttpContext.Session.GetInt32("PortfolioId"));
+            createTransactionDto.TransactionType = "Sell";
+         await _transactionService.ManageTransaction(createTransactionDto, portfolioId);
+         return RedirectToAction("Index");
+        } 
+        public async Task<IActionResult> TransferTransaction(CreateTransactionDto createTransactionDto)
+        {
+            var portfolioId =  Convert.ToInt32(HttpContext.Session.GetInt32("PortfolioId"));
+            createTransactionDto.TransactionType = "Transfer";
          await _transactionService.ManageTransaction(createTransactionDto, portfolioId);
          return RedirectToAction("Index");
         }

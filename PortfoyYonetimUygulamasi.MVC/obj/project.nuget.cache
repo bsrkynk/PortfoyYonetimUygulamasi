@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ImFsAELn05OYHzyl+6Q/g0ywrpsan1WFPclZdXCLpqfEeldI0cM6r8oWulS79CSBWrP2ZzRoK1dqeM/Gp9ImWw==",
+  "dgSpecHash": "3b8HxTjKELuQzJziI2guSDw9JJ2wyU31yoUQuiRetgyYiF1SyhbJfsS98U6lzZV7H2+1M5bj6vPNbzfkSlOpmg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.MVC\\PortfoyYonetimUygulamasi.MVC.csproj",
+  "projectFilePath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.MVC\\PortfoyYonetimUygulamasi.MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hakan\\.nuget\\packages\\bootstrap.chosen\\1.0.0\\bootstrap.chosen.1.0.0.nupkg.sha512",
     "C:\\Users\\hakan\\.nuget\\packages\\jquery\\1.6.4\\jquery.1.6.4.nupkg.sha512",

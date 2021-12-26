@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VoxMxoJ37BMMgJ48A0Pq9fd7tAPwa6CirCeoczk6gusB3Vc0+0B9uXD86BH2hnW1qtVcPNuEzo2Q5MhBPBLABQ==",
+  "dgSpecHash": "4r2ymnEqA5zR8ZN/IVnjC8/Vh1YRUxuVcae87tLjgejUUd7cYsaCSlERGnk4Rlg8Xr021ex9bYCteGau3GdQ7g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Host\\PortfoyYonetimUygulamasi.Host.csproj",
+  "projectFilePath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Host\\PortfoyYonetimUygulamasi.Host.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hakan\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
     "C:\\Users\\hakan\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.7\\microsoft.aspnet.razor.3.2.7.nupkg.sha512",
