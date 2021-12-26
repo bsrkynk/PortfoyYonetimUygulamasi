@@ -15,5 +15,6 @@ namespace PortfoyYonetimUygulamasi.MVC.ViewModels
         public int PortfolioId { get; set; }
         public List<CreateTransactionDto> Coins { get; set; }
         public CreateTransactionDto CreateTransactionDto { get; set; }
+        public List<CoinWalletJoin> CoinWallets { get; set; }
     }
 }

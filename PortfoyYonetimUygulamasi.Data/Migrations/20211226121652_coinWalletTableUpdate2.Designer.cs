@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts;
 
 namespace PortfoyYonetimUygulamasi.Data.Migrations
 {
     [DbContext(typeof(PortfoyYonetimUygulamasiContext))]
-    partial class PortfoyYonetimUygulamasiContextModelSnapshot : ModelSnapshot
+    [Migration("20211226121652_coinWalletTableUpdate2")]
+    partial class coinWalletTableUpdate2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -83,9 +85,6 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
-
-                    b.Property<string>("TotalWelthOfCoin")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("WalletId")
                         .HasColumnType("int");

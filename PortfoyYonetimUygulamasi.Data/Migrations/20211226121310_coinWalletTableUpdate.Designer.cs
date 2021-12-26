@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts;
 
 namespace PortfoyYonetimUygulamasi.Data.Migrations
 {
     [DbContext(typeof(PortfoyYonetimUygulamasiContext))]
-    partial class PortfoyYonetimUygulamasiContextModelSnapshot : ModelSnapshot
+    [Migration("20211226121310_coinWalletTableUpdate")]
+    partial class coinWalletTableUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,12 +71,6 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("AmountOfCoin")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AvarageBuyPrice")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("CoinId")
                         .HasColumnType("int");
 
@@ -83,9 +79,6 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
-
-                    b.Property<string>("TotalWelthOfCoin")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("WalletId")
                         .HasColumnType("int");
@@ -216,6 +209,12 @@ namespace PortfoyYonetimUygulamasi.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("AmountOfCoin")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AvarageBuyPrice")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");

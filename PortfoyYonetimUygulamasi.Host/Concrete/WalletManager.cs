@@ -17,12 +17,14 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
         {
             _unitOfWork = unitOfWork;
         }
+
+    
         public async Task<int> InitialWalletCreate(int portfolioId) //portföy oluşturulurken wallet da boş olarak oluşturuluyor
         {
             Wallet wallet = new Wallet
             {
-                AmountOfCoin = "0",
-                AvarageBuyPrice = "0",
+                //AmountOfCoin = "0",
+                //AvarageBuyPrice = "0",
                 IsActive = true,
                 IsDeleted = false,
                 TotalWealth = "0",
@@ -38,7 +40,6 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
         {
             var wallet=await _unitOfWork.Wallets.GetAsync(x => x.PortfolioId == portfolioId);
             return wallet.Id;
-
         }
 
     }

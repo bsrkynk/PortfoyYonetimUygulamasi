@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PortfoyYonetimUygulamasi.Entity.Concrete;
 using PortfoyYonetimUygulamasi.Entity.Dtos;
 
 namespace PortfoyYonetimUygulamasi.Host.Abstract
@@ -11,5 +12,6 @@ namespace PortfoyYonetimUygulamasi.Host.Abstract
     {
         Task AddCoinWallet(int coinId, int walletId);
         Task<IEnumerable<CoinWalletJoin>> GetUnifiedCoinWallet(int coinId, int walletId);
+        Task<List<CoinWalletJoin>> GetUserWallet(int portfolioId);
     }
 }

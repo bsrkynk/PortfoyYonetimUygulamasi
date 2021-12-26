@@ -31,8 +31,8 @@
         console.log("gird");
     });
 
-    function DdlChange(val) {
-
+    function DdlChange(val,type) {
+        
         var selected = val;
         console.log(selected);
         $.ajax({
@@ -42,7 +42,15 @@
             data: { Id: selected },
             success: function(response) {
                 var price = jQuery.parseJSON(response);
-                $("#txtPrice").val(price);
+                if (type === "buyCoins")
+                    $("#txtPrice").val(price);
+                else if (type === "sellCoins") {
+                    console.log("sel");
+                    $("#txtPriceSell").val(price);
+                }
+                else if (type === "transferCoins")
+                    $("#txtPriceTransfer").val(price);
+
             },
             error: function(response) {
                 console.log("basarisiz");
@@ -51,11 +59,29 @@
         });
     }
 
-    function CalculateTotalAmount(val) {
-        var amount=$("#txtAmount").val();
-        var price=$("#txtPrice").val();
-        var totalAmount = amount * price;
-        $("#txtTotalAmount").val(totalAmount);
+    function CalculateTotalAmount(val, type) {
+
+        if (type === "txtAmount")
+        {
+            var amount = $("#txtAmount").val();
+            var price=$("#txtPrice").val();
+            var totalAmount = amount * price;
+            $("#txtTotalAmount").val(totalAmount);
+        }
+
+       else if (type === "txtAmountSell") {
+            var amount2 = $("#txtAmountSell").val();
+            var price2 = $("#txtPriceSell").val();
+            var totalAmount2 = amount2 * price2;
+            $("#txtTotalAmountSell").val(totalAmount2);
+        }
+
+       else if (type === "txtAmountTranfer") {
+            var amount3 = $("#txtAmountTransfer").val();
+            var price3 = $("#txtPriceTransfer").val();
+            var totalAmount3 = amount3 * price3;
+            $("#txtTotalAmountTransfer").val(totalAmount3);
+        }
     }
 </script>
 
@@ -71,12 +97,38 @@
         </div>
     }
 }
-
 <div>
     @if (Model.CheckPortfolioPartial == true)
     {
+
+        <div>
+            <table class="table table-striped table-dark">
+                <p> Toplam Mal Varlığı: @Model.CoinWallets.Select(x => x.TotalWelthOfWallet).FirstOrDefault()</p>
+                <thead>
+                    <tr>
+                        <th scope="col">Coin Adı</th>
+                        <th scope="col">Coin Miktarı</th>
+                        <th scope="col">Ortalama Alış Fiyatı</th>
+                        <th scope="col">Sahip Olunan Toplam Coin Fiyatı</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    @foreach (var coins in Model.CoinWallets)
+                    {
+                        <tr>
+                            <td>  @coins.CoinName</td>
+                            <td>  @coins.AmountOfCoin</td>
+                            <td>  @coins.AvarageBuyPrice</td>
+                            <td>  @coins.TotalWelthOfCoin</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
         @*@Html.PartialAsync("_PortfolioDetailPartial");*@
         <button id="btnCreateTransaction" data-toggle="modal" data-target="#createTransactionModal" class="btn btn-warning">Yeni Ekle </button>
+
 
         <!-- işlem ekle modal -->
         <div class="modal fade" id="createTransactionModal" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -99,27 +151,57 @@
                             <div class="tab-pane active" id="buy">
                                 @using (Html.BeginForm("BeginTransaction", "Portfolio", FormMethod.Post))
                                 {
-                                    <p>    Coin Seçiniz</p>
+                                    <p>    Coin Seçiniz</p>@*, @readonly = "readonly"*@
                                     @Html.DropDownListFor(x => x.CreateTransactionDto.CoinName,
-                                        (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", id = "coins", @onchange = "DdlChange(this.value)" })
+                                        (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", id = "buyCoins", @onchange = "DdlChange(this.value,this.id)" })
                                     <p>Coin Fiyatı</p>
-                                    @Html.TextBoxFor(m => m.CreateTransactionDto.CoinPrice, new { @type = "text", @readonly = "readonly", @id = "txtPrice" })<br />
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.CoinPrice, new { @type = "text", @id = "txtPrice" })<br />
                                     <p>  Adet</p>
-                                    @Html.TextBoxFor(m => m.CreateTransactionDto.CoinAmount, new { @type = "text", @id = "txtAmount", @onchange = "CalculateTotalAmount(this.value)" })
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.CoinAmount, new { @type = "text", @id = "txtAmount", @onchange = "CalculateTotalAmount(this.value,this.id)" })
                                     <p>Toplam Tutar</p>
                                     @Html.TextBoxFor(m => m.CreateTransactionDto.TotalAmount, new { @type = "text", @id = "txtTotalAmount" })
-                                    @Html.TextBoxFor(m => m.CreateTransactionDto.TransactionType , new {  @Value="4"  })
-                                    
-                                    
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.TransactionType, new { @Value = "4" })
+
+
                                     <button class="btn btn-primary">Satın Al</button>
                                 }
                             </div>
 
                             <div class="tab-pane" id="sell">
-                                content 0
+                                @using (Html.BeginForm("SellTransaction", "Portfolio", FormMethod.Post))
+                                {
+                                    <p>    Coin Seçiniz</p>@*, @readonly = "readonly"*@
+                                    @Html.DropDownListFor(x => x.CreateTransactionDto.CoinName,
+                                        (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", id = "sellCoins", @onchange = "DdlChange(this.value,this.id)" })
+                                    <p>Coin Fiyatı</p>
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.CoinPrice, new { @type = "text", @id = "txtPriceSell" })<br />
+                                    <p>  Adet</p>
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.CoinAmount, new { @type = "text", @id = "txtAmountSell", @onchange = "CalculateTotalAmount(this.value,this.id)" })
+                                    <p>Toplam Tutar</p>
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.TotalAmount, new { @type = "text", @id = "txtTotalAmountSell" })
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.TransactionType, new { @Value = "4" })
+
+
+                                    <button class="btn btn-primary">Satış Yap</button>
+                                }
                             </div>
                             <div class="tab-pane" id="transfer">
-                                content 1
+                                @using (Html.BeginForm("TransferTransaction", "Portfolio", FormMethod.Post))
+                                {
+                                    <p>    Coin Seçiniz</p>@*, @readonly = "readonly"*@
+                                    @Html.DropDownListFor(x => x.CreateTransactionDto.CoinName,
+                                        (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", id = "transferCoins", @onchange = "DdlChange(this.value,this.id)" })
+                                    <p>Coin Fiyatı</p>
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.CoinPrice, new { @type = "text", @id = "txtPriceTransfer" })<br />
+                                    <p>  Adet</p>
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.CoinAmount, new { @type = "text", @id = "txtAmountTransfer", @onchange = "CalculateTotalAmount(this.value,this.id)" })
+                                    <p>Toplam Tutar</p>
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.TotalAmount, new { @type = "text", @id = "txtTotalAmountTransfer" })
+                                    @Html.TextBoxFor(m => m.CreateTransactionDto.TransactionType, new { @Value = "4" })
+
+
+                                    <button class="btn btn-primary">Transfer Et</button>
+                                }
                             </div>
                         </div>
                     </div>

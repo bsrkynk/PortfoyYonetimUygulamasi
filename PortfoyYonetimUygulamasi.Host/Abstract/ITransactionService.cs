@@ -11,5 +11,6 @@ namespace PortfoyYonetimUygulamasi.Host.Abstract
     {
         Task ManageTransaction(CreateTransactionDto addCoinDto, int instancePortfolioId);
         Task AddTransaction(CreateTransactionDto addTransactionDto, int instancePortfolioId);
+
     }
 }
