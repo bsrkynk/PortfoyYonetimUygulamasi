@@ -527,19 +527,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hakan\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj",
+      "projectUniqueName": "C:\\Proje\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj",
       "projectName": "PortfoyYonetimUygulamasi.Shared",
-      "projectPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj",
-      "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hakan\\Source\\Repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Shared\\obj\\",
+      "projectPath": "C:\\Proje\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Proje\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -585,7 +585,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }

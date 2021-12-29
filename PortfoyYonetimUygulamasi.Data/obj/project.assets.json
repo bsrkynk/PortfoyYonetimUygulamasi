@@ -5799,19 +5799,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hakan\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\PortfoyYonetimUygulamasi.Data.csproj",
+      "projectUniqueName": "C:\\Proje\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Data\\PortfoyYonetimUygulamasi.Data.csproj",
       "projectName": "PortfoyYonetimUygulamasi.Data",
-      "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\PortfoyYonetimUygulamasi.Data.csproj",
-      "packagesPath": "C:\\Users\\hakan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Data\\obj\\",
+      "projectPath": "C:\\Proje\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Data\\PortfoyYonetimUygulamasi.Data.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "C:\\Proje\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hakan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5825,11 +5825,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj": {
-              "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj"
+            "C:\\Proje\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj": {
+              "projectPath": "C:\\Proje\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Entity\\PortfoyYonetimUygulamasi.Entity.csproj"
             },
-            "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj": {
-              "projectPath": "C:\\Users\\hakan\\source\\repos\\PortfoyYonetimUygulamasiEsra\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj"
+            "C:\\Proje\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj": {
+              "projectPath": "C:\\Proje\\PortfoyYonetimUygulamasi\\PortfoyYonetimUygulamasi.Shared\\PortfoyYonetimUygulamasi.Shared.csproj"
             }
           }
         }
@@ -5874,7 +5874,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
       }
     }
   }
