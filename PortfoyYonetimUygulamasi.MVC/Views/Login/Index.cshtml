@@ -12,16 +12,16 @@
                                     {
                                         <div class="form-sample">
                                             <div class="form-group">
-                                                @Html.LabelFor(x => x.UserName )
-                                                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+                                                <p><b>Kullanıcı Adı</b></p>                                             
+                                                @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })<br />
                                             </div>
                                             <div class="form-group">
-                                                @Html.LabelFor(x => x.UserPassword)
-                                                @Html.TextBoxFor(x => x.UserPassword, new { @class = "form-control" })
+                                               <p><b>Kullanıcı Şifresi</b></p>
+                                                @Html.TextBoxFor(x => x.UserPassword, new { @class = "form-control" })<br />
                                             </div>
                                         </div>
 
-                                        <button class="btn btn-warning">Giriş Yap</button>
+                                        <button class="btn btn-info">Giriş Yap</button>
 
                                     }
                     @*<form asp-controller="Login" asp-action="SignIn" method="post">
