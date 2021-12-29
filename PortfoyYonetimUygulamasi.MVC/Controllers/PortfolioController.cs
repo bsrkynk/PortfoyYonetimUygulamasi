@@ -21,7 +21,7 @@ using JsonResult = Microsoft.AspNetCore.Mvc.JsonResult;
 
 namespace PortfoyYonetimUygulamasi.MVC.Controllers
 {
-    //[UserFilter]
+    [UserFilter]
     public class PortfolioController : Controller
     {
         private readonly IPortfolioService _portfolioService;
@@ -39,7 +39,7 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         public async Task<IActionResult> Index()
         {
             //Convert.ToInt32(HttpContext.Session.GetInt32("USERNAME")
-            var portfolios = await _portfolioService.GetAllUserPortfolios(1);
+            var portfolios = await _portfolioService.GetAllUserPortfolios(Convert.ToInt32(HttpContext.Session.GetInt32("USERNAME")));
             if (portfolios != null)
             {
                 _portfolioViewModel.UserPortfolioes = portfolios;
@@ -81,7 +81,7 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         [Microsoft.AspNetCore.Mvc.HttpPost]
         public async Task<IActionResult> CreatePortfolio(PortfolioViewModel portPortfolioViewModel)
         {
-            portPortfolioViewModel.createPortfolioDto.UserId = Convert.ToInt32(/*HttpContext.Session.GetInt32("USERNAME")*/1);
+            portPortfolioViewModel.createPortfolioDto.UserId = Convert.ToInt32(HttpContext.Session.GetInt32("USERNAME"));
             await _portfolioService.AddPortfolio(portPortfolioViewModel.createPortfolioDto);
             return RedirectToAction("Index");
         }
