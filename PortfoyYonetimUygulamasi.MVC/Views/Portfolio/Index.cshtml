@@ -120,7 +120,7 @@
                             <ul class="nav">
                                 <li class="scroll-to-section"><a href=@Url.Action("Index", "Home") class="active">AnaSayfa</a></li>
                                 <li class="scroll-to-section"><a href=@Url.Action("Index", "Portfolio")>Portföy</a></li>
-                                <li><div class="gradient-button"><a id="modal_trigger" href="@Url.Action("Index", "Login")"><i class="fa fa-sign-in-alt"></i> Çıkış Yap</a></div></li>
+                                <li><div class="gradient-button"><a id="modal_trigger" href="@Url.Action("Logout", "Login")"><i class="fa fa-sign-in-alt"></i> Çıkış Yap</a></div></li>
 
                             </ul>
                             <a class='menu-trigger'>
@@ -218,16 +218,16 @@
                                                         <div class="tab-pane active" id="buy">
                                                             @using (Html.BeginForm("BeginTransaction", "Portfolio", FormMethod.Post))
                                                             {
-                                                                <p><b>Coin Seçiniz</b></p>@*, @readonly = "readonly"*@
+                                                                <p style="color: black"><b>Coin Seçiniz</b></p>@*, @readonly = "readonly"*@
                                                                 @Html.DropDownListFor(x => x.CreateTransactionDto.CoinName,
                                                                     (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", id = "buyCoins", @onchange = "DdlChange(this.value,this.id)" })<br />
-                                                                <p><b>Coin Fiyatı</b></p>
+                                                                <p style="color: black"><b>Coin Fiyatı</b></p>
                                                                 @Html.TextBoxFor(m => m.CreateTransactionDto.CoinPrice, new { @type = "text", @id = "txtPrice" })
                                                                 <p><b></b></p>
-                                                                <p><b>Adet</b></p>
+                                                                <p style="color: black"><b>Adet</b></p>
                                                                 @Html.TextBoxFor(m => m.CreateTransactionDto.CoinAmount, new { @type = "text", @id = "txtAmount", @onchange = "CalculateTotalAmount(this.value,this.id)" })
                                                                 <p><b></b></p>
-                                                                <p><b>Toplam Tutar</b></p>
+                                                                <p style="color: black"><b>Toplam Tutar</b></p>
                                                                 @Html.TextBoxFor(m => m.CreateTransactionDto.TotalAmount, new { @type = "text", @id = "txtTotalAmount" })
                                                                 @*@Html.TextBoxFor(m => m.CreateTransactionDto.TransactionType, new { @Value = "4" })*@
 
@@ -238,16 +238,16 @@
                                                         <div class="tab-pane" id="sell">
                                                             @using (Html.BeginForm("SellTransaction", "Portfolio", FormMethod.Post))
                                                             {
-                                                                <p><b>Coin Seçiniz</b></p>@*, @readonly = "readonly"*@
+                                                                <p style="color: black"><b>Coin Seçiniz</b></p>@*, @readonly = "readonly"*@
                                                                 @Html.DropDownListFor(x => x.CreateTransactionDto.CoinName,
                                                                     (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", id = "sellCoins", @onchange = "DdlChange(this.value,this.id)" })<br />
-                                                                <p><b>Coin Fiyatı</b></p>
+                                                                <p style="color: black"><b>Coin Fiyatı</b></p>
                                                                 @Html.TextBoxFor(m => m.CreateTransactionDto.CoinPrice, new { @type = "text", @id = "txtPriceSell" })<br />
                                                                 <p><b></b></p>
-                                                                <p><b>Adet</b></p>
+                                                                <p style="color: black"><b>Adet</b></p>
                                                                 @Html.TextBoxFor(m => m.CreateTransactionDto.CoinAmount, new { @type = "text", @id = "txtAmountSell", @onchange = "CalculateTotalAmount(this.value,this.id)" })
                                                                 <p><b></b></p>
-                                                                <p><b>Toplam Tutar</b></p>
+                                                                <p style="color: black"><b>Toplam Tutar</b></p>
                                                                 @Html.TextBoxFor(m => m.CreateTransactionDto.TotalAmount, new { @type = "text", @id = "txtTotalAmountSell" })
                                                                 @*@Html.TextBoxFor(m => m.CreateTransactionDto.TransactionType, new { @Value = "4" })*@
 
@@ -258,16 +258,16 @@
                                                         <div class="tab-pane" id="transfer">
                                                             @using (Html.BeginForm("TransferTransaction", "Portfolio", FormMethod.Post))
                                                             {
-                                                                <p><b>Coin Seçiniz</b></p>@*, @readonly = "readonly"*@
+                                                                <p style="color: black"><b>Coin Seçiniz</b></p>@*, @readonly = "readonly"*@
                                                                 @Html.DropDownListFor(x => x.CreateTransactionDto.CoinName,
                                                                     (List<SelectListItem>)ViewBag.dgr, new { @class = "form-control", id = "transferCoins", @onchange = "DdlChange(this.value,this.id)" })<br />
-                                                                <p><b>Coin Fiyatı</b></p>
+                                                                <p style="color: black"><b>Coin Fiyatı</b></p>
                                                                 @Html.TextBoxFor(m => m.CreateTransactionDto.CoinPrice, new { @type = "text", @id = "txtPriceTransfer" })<br />
                                                                 <p><b></b></p>
-                                                                <p><b>Adet</b></p>
+                                                                <p style="color: black"><b>Adet</b></p>
                                                                 @Html.TextBoxFor(m => m.CreateTransactionDto.CoinAmount, new { @type = "text", @id = "txtAmountTransfer", @onchange = "CalculateTotalAmount(this.value,this.id)" })
                                                                 <p><b></b></p>
-                                                                <p><b>Toplam Tutar</b></p>
+                                                                <p style="color: black"><b>Toplam Tutar</b></p>
                                                                 @Html.TextBoxFor(m => m.CreateTransactionDto.TotalAmount, new { @type = "text", @id = "txtTotalAmountTransfer" })
                                                                 @*@Html.TextBoxFor(m => m.CreateTransactionDto.TransactionType, new { @Value = "4" })*@
                                                                 <p><b></b></p>

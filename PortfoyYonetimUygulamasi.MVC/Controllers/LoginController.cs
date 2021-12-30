@@ -33,7 +33,7 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         public async Task< IActionResult> Register(UserAddDto userAddDto) //async yapılmazsa kaydetmiyor
         {
           await  _userService.Add(userAddDto);
-            return View();
+            return Redirect("/Portfolio/Index/");
         }
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInUserDto signInUserDto)
@@ -46,6 +46,14 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
             }
 
             return Redirect("/Home/Index");
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+
+            return Redirect("/Home/Index");
+
         }
 
         private void SaveDataWithSession(int result)
