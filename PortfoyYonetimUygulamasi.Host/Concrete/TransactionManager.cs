@@ -41,6 +41,7 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
             await AddTransaction(addTransactionDto, instancePortfolioId);
             var unifiedWalletCoin = await _coinWalletService.GetUnifiedCoinWallet(addedCoin, addedWallet);
 
+            //burada var mı yok mu kontrolünü yap
             await DoWalletTransaction(addTransactionDto, unifiedWalletCoin);
         }
 

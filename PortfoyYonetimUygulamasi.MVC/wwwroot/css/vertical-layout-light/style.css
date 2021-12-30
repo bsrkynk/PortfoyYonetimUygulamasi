@@ -9255,7 +9255,7 @@ pre code {
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
   position: relative;
-  width: 50%;
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -13783,8 +13783,7 @@ input[type="button"].btn-block {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid #e3e3e3;
-  border-radius: 5px;
-  width:30%
+  border-radius: 20px;
 }
 
 .card > hr {
@@ -13818,7 +13817,6 @@ input[type="button"].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
-  width:50px;
 }
 
 .card-title {

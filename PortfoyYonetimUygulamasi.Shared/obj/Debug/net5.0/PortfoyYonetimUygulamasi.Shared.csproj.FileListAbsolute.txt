@@ -46,3 +46,15 @@ C:\Proje\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5
 C:\Proje\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.dll
 C:\Proje\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\ref\PortfoyYonetimUygulamasi.Shared.dll
 C:\Proje\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.pdb
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\bin\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.deps.json
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\bin\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.dll
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\bin\Debug\net5.0\ref\PortfoyYonetimUygulamasi.Shared.dll
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\bin\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.pdb
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.csprojAssemblyReference.cache
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.AssemblyInfoInputs.cache
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.AssemblyInfo.cs
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.csproj.CoreCompileInputs.cache
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.dll
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\ref\PortfoyYonetimUygulamasi.Shared.dll
+E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.pdb
