@@ -1,6 +1,10 @@
 ﻿@using Microsoft.AspNetCore.Http
 @using PortfoyYonetimUygulamasi.Entity.User;
 
+@{ 
+    string? username = Context.Session.GetString("USERNAME");
+}
+
 @model List<_24HourExchange>;
 
 <!DOCTYPE html>
@@ -65,8 +69,15 @@
                         <ul class="nav">
                             <li class="scroll-to-section"><a href=@Url.Action("Index", "Home") class="active">AnaSayfa</a></li>
                             <li class="scroll-to-section"><a href=@Url.Action("Index", "Portfolio")>Portföy</a></li>
-                            <li><div class="gradient-button"><a id="modal_trigger" href="@Url.Action("Register", "Login")"><i class="fa fa-sign-in-alt"></i> Kayıt Ol</a></div></li>
-                            <li><div class="gradient-button"><a id="modal_trigger" href="@Url.Action("Index", "Login")"><i class="fa fa-sign-in-alt"></i> Giriş Yap</a></div></li>
+                            @if (username == null)
+                            {
+                                <li><div class="gradient-button"><a id="modal_trigger" href="@Url.Action("Register", "Login")"><div style="align-items: center; align-content:center; vertical-align: central"><i class="fa fa-sign-in-alt"></i>Kayıt Ol</div></a></div></li>
+                                <li><div class="gradient-button"><a id="modal_trigger" href="@Url.Action("Index", "Login")"><i class="fa fa-sign-in-alt"></i> Giriş Yap</a></div></li>
+                            }
+                            else
+                            {
+                                <li><div class="gradient-button"><a id="modal_trigger" href="@Url.Action("Logout", "Login")"><i class="fa fa-sign-in-alt"></i> Çıkış Yap</a></div></li>
+                            }
 
                         </ul>
                         <a class='menu-trigger'>
