@@ -103,7 +103,7 @@
     <link rel="shortcut icon" href="~/images/favicon.png" />
 
 </head>
-<body  style="background-color:#f5f7ff">
+<body style="background-color:#f5f7ff">
     <!-- ***** Header Area Start ***** -->
     <div>
         <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s" style="background-color:white">
@@ -123,10 +123,6 @@
                                 <li><div class="gradient-button"><a id="modal_trigger" href="@Url.Action("Logout", "Login")"><i class="fa fa-sign-in-alt"></i> Çıkış Yap</a></div></li>
 
                             </ul>
-                            <a class='menu-trigger'>
-                                <span>Menu</span>
-                            </a>
-                            <!-- ***** Menu End ***** -->
                         </nav>
                     </div>
                 </div>
@@ -141,7 +137,7 @@
                                 <div class="nav-link" href="index.html">
                                     <i class="icon-grid menu-icon"></i>
                                     <button class="btn btn-white menu-title">@x.PortfolioName </button>
-                            </div>
+                                </div>
                             </li>
                         }
                     }
@@ -169,9 +165,9 @@
                                             <h5>Mevcut Bakiye:  @Model.CoinWallets.Select(x => x.TotalWelthOfWallet).FirstOrDefault()</h5>
                                             <br />
 
-                                            <div> 
-                                            <h2>Varlıkların </h2>
-                                            <button id="btnCreateTransaction" data-toggle="modal" data-target="#createTransactionModal" class="btn btn-dark" style=" float: right; margin-bottom: 5px;">Yeni Ekle </button>
+                                            <div>
+                                                <h2>Varlıkların </h2>
+                                                <button id="btnCreateTransaction" data-toggle="modal" data-target="#createTransactionModal" class="btn btn-dark" style=" float: right; margin-bottom: 5px;">Yeni Ekle </button>
                                             </div>
 
                                             <br />
@@ -283,14 +279,14 @@
                                             </div>
                                         </div>
                                     </div>
-                           
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             }
-            </div>
+        </div>
         <!-- portföy ekle -->
         <div class="modal fade" id="createPortfolioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">

@@ -41,8 +41,25 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
             await AddTransaction(addTransactionDto, instancePortfolioId);
             var unifiedWalletCoin = await _coinWalletService.GetUnifiedCoinWallet(addedCoin, addedWallet);
 
-            //burada var mı yok mu kontrolünü yap
-            await DoWalletTransaction(addTransactionDto, unifiedWalletCoin);
+            var coin = await _unitOfWork.Coins.GetAllAsync(x => x.CoinName == addTransactionDto.CoinName);
+            var coin2 = await _unitOfWork.CoinWallets.GetAllAsync(x => x.Coin == coin[0]);
+            var x = coin2.Select(x => x.AmountOfCoin);
+            if (addTransactionDto.TransactionType == "Sell" && Int32.Parse(addTransactionDto.CoinAmount) <= Int32.Parse(x.ToArray()[0]))
+            {
+                addTransactionDto.IsSuccess = true;
+                await DoWalletTransaction(addTransactionDto, unifiedWalletCoin);
+            }
+            else if(addTransactionDto.TransactionType!="Sell")
+            {
+                addTransactionDto.IsSuccess = true;
+                await DoWalletTransaction(addTransactionDto, unifiedWalletCoin);
+            }
+            else
+            {
+
+                addTransactionDto.IsSuccess = false;
+                return;
+            }
         }
 
         public async Task AddTransaction(CreateTransactionDto addTransactionDto, int instancePortfolioId)

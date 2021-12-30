@@ -13,5 +13,6 @@ namespace PortfoyYonetimUygulamasi.Entity.Dtos
         public string CoinAmount { get; set; }
         public string TotalAmount { get; set; }
         public string TransactionType { get; set; }
+        public bool IsSuccess { get; set; }
     }
 }
