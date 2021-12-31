@@ -90,22 +90,18 @@ namespace PortfoyYonetimUygulamasi.MVC.Controllers
         {
             var portfolioId =  Convert.ToInt32(HttpContext.Session.GetInt32("PortfolioId"));
             createTransactionDto.TransactionType = "Buy";
-         await _transactionService.ManageTransaction(createTransactionDto, portfolioId);
+      var checkAmount=   await _transactionService.ManageTransaction(createTransactionDto, portfolioId);
+      ViewBag.type = checkAmount;
          return RedirectToAction("Index");
         } 
         public async Task<IActionResult> SellTransaction(CreateTransactionDto createTransactionDto)
         {
             var portfolioId =  Convert.ToInt32(HttpContext.Session.GetInt32("PortfolioId"));
             createTransactionDto.TransactionType = "Sell";
-         await _transactionService.ManageTransaction(createTransactionDto, portfolioId);
-         return RedirectToAction("Index");
+            var checkAmount = await _transactionService.ManageTransaction(createTransactionDto, portfolioId);
+         ViewBag.type= checkAmount;
+            return RedirectToAction("Index");
         } 
-        public async Task<IActionResult> TransferTransaction(CreateTransactionDto createTransactionDto)
-        {
-            var portfolioId =  Convert.ToInt32(HttpContext.Session.GetInt32("PortfolioId"));
-            createTransactionDto.TransactionType = "Transfer";
-         await _transactionService.ManageTransaction(createTransactionDto, portfolioId);
-         return RedirectToAction("Index");
-        }
+
     }
 }

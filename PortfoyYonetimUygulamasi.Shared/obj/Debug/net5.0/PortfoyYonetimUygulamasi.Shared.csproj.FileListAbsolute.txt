@@ -58,3 +58,15 @@ E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net
 E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.dll
 E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\ref\PortfoyYonetimUygulamasi.Shared.dll
 E:\GitHub\PortfoyYonetimUygulamasi\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.pdb
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\bin\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.deps.json
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\bin\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.dll
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\bin\Debug\net5.0\ref\PortfoyYonetimUygulamasi.Shared.dll
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\bin\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.pdb
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.csprojAssemblyReference.cache
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.AssemblyInfoInputs.cache
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.AssemblyInfo.cs
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.csproj.CoreCompileInputs.cache
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.dll
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\ref\PortfoyYonetimUygulamasi.Shared.dll
+C:\Users\hakan\Source\Repos\PortfoyYonetimUygulamasiHakan\PortfoyYonetimUygulamasi.Shared\obj\Debug\net5.0\PortfoyYonetimUygulamasi.Shared.pdb
