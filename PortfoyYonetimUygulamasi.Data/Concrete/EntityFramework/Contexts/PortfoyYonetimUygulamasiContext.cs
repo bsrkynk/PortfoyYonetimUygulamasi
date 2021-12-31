@@ -22,7 +22,9 @@ namespace PortfoyYonetimUygulamasi.Data.Concrete.EntityFramework.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                "Server=DESKTOP-P4AJEMG\\SQLEXPRESS;Database=PortYonetimUygulamasi;Trusted_Connection=True;Connect Timeout=30;MultipleActiveResultSets=True;");
+                "Server=.;Database=PortYonetimUygulamasi;Trusted_Connection=True;Connect Timeout=30;MultipleActiveResultSets=True;");
+            //DESKTOP - P4AJEMG\\SQLEXPRESS
+
             optionsBuilder.EnableSensitiveDataLogging();
         }
 

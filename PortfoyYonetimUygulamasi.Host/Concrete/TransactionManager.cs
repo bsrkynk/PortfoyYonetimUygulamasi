@@ -18,8 +18,7 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
      public   enum Side
         {
             Buy=1,
-            Sell=2,
-            Transfer=3
+            Sell=2
         }
     private readonly IUnitOfWork _unitOfWork;
         private readonly ICoinService _coinService;
@@ -32,7 +31,7 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
             _walletService = walletService;
             _coinWalletService = coinWalletService;
         }
-        public async Task ManageTransaction(CreateTransactionDto addTransactionDto, int instancePortfolioId)
+        public async Task<bool> ManageTransaction(CreateTransactionDto addTransactionDto, int instancePortfolioId)
         {
             var addedCoin = await _coinService.AddCoin(addTransactionDto);
             var addedWallet = await _walletService.GetCreatedWalletId(instancePortfolioId);// her portföyde bir wallet olacağı için çoka çok tablosuna kayıt olması için portföy id den o portföyün walletının idsi bulunuyor.
@@ -48,17 +47,19 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
             {
                 addTransactionDto.IsSuccess = true;
                 await DoWalletTransaction(addTransactionDto, unifiedWalletCoin);
+                return true;
             }
             else if(addTransactionDto.TransactionType!="Sell")
             {
                 addTransactionDto.IsSuccess = true;
                 await DoWalletTransaction(addTransactionDto, unifiedWalletCoin);
+                return true;
             }
             else
             {
 
                 addTransactionDto.IsSuccess = false;
-                return;
+                return false;
             }
         }
 
@@ -88,10 +89,6 @@ namespace PortfoyYonetimUygulamasi.Host.Concrete
             else if (createTransactionDto.TransactionType == "Sell")
             {
                 await ManageProccess(createTransactionDto, joinedCoinWallet, Side.Sell);
-            }
-            else if (createTransactionDto.TransactionType == "Transfer")
-            {
-                await ManageProccess(createTransactionDto, joinedCoinWallet, Side.Transfer);
             }
         }
         public async Task ManageProccess(CreateTransactionDto createTransactionDto, IEnumerable<CoinWalletJoin> joinedCoinWallets, Side side )
